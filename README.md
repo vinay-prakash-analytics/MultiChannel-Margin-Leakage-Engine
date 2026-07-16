@@ -12,3 +12,20 @@ An advanced financial analytics engine built in Power BI to audit and reconcile 
 
 * * MultiChannel_MarginLeakage_Engine_V2.pbix * : Full interactive Power BI Desktop analytical hub and metrics canvas.
 * * MultiChannel_Ecom_RawData.xlsx * : Raw source dataset demonstrating multi-tab text-parsing extraction pipelines.
+## 📊 Analytics Interface & Engine Architecture
+
+### Executive Performance Hub
+The primary visualization canvas providing high-level executive variance tracking across distributed sales channels:
+![Executive Performance Hub](1_executive_dashboard.jpg)
+
+### Forensic SKU Leakage Breakdown
+Our diagnostic layout utilizing decomposition structures to isolate systemic fee anomalies down to the item level:
+![Forensic SKU Leakage](2_sku_decomposition.jpg)
+
+### Core Data Model Architecture
+The production-grade star-schema configuration linking core transaction facts with unified master records:
+![Star Schema Data Model](3_star_schema_model.jpg)
+
+### Automated ETL Pipeline
+Custom text-parsing rules and structural step splits built in Power Query to cleanly process incoming data streams:
+![Power Query ETL Pipeline](4_power_query_etl.jpg)
