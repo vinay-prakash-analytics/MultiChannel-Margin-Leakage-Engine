@@ -53,6 +53,8 @@ Blended Contribution Margin =
 SUM(Shopify_Orders[Net Revenue]) + SUM(Amazon_Fees[Amount]) - SUM(Product_Master[Total COGS])
 ```
 ### 2. Forensic Margin Leakage %
+Tracks the total percentage of revenue lost across digital channels due to undocumented platform fees, processing discrepancies, or reconciliation gaps.
+
 ```dax
 Margin Leakage Pct = 
 DIVIDE(
