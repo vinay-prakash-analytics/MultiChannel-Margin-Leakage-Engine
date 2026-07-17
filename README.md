@@ -49,6 +49,7 @@ Calculates true net profitability across all digital channels simultaneously by 
 ```dax
 Blended Contribution Margin = 
 SUM(Shopify_Orders[Net Revenue]) + SUM(Amazon_Fees[Amount]) - SUM(Product_Master[Total COGS])
+
 ### 2. Forensic Margin Leakage %
 Tracks total revenue loss percentages dynamically based on undocumented fee adjustments or multi-channel integration gaps.
 ```dax
