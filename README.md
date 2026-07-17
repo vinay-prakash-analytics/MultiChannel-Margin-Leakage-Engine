@@ -40,18 +40,19 @@ The production-grade star-schema configuration linking core transaction facts wi
 ### Automated ETL Pipeline
 Custom text-parsing rules and structural step splits built in Power Query to cleanly process incoming data streams:
 ![Power Query ETL Pipeline](4_power_query_etl.jpg)
+
 ## 🧮 Advanced DAX Financial Measures
 
 While the data modeling structure handles the data relationship framework, the engine relies on specialized DAX metrics to dynamically compute financial impact across shifting multi-platform fee structures:
 
 ### 1. Blended Contribution Margin
 Calculates true net profitability across all digital channels simultaneously by deducting variable platform referral fees, fulfillment costs, and structural COGS.
+
 ```dax
 Blended Contribution Margin = 
 SUM(Shopify_Orders[Net Revenue]) + SUM(Amazon_Fees[Amount]) - SUM(Product_Master[Total COGS])
-
+```
 ### 2. Forensic Margin Leakage %
-Tracks total revenue loss percentages dynamically based on undocumented fee adjustments or multi-channel integration gaps.
 ```dax
 Margin Leakage Pct = 
 DIVIDE(
@@ -59,3 +60,4 @@ DIVIDE(
     SUM(Shopify_Orders[Gross Sales]) + SUM(Amazon_Fees[Gross Sales]), 
     0
 )
+```
