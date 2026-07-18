@@ -46,11 +46,10 @@ Custom text-parsing rules and structural step splits built in Power Query to cle
 While the data modeling structure handles the data relationship framework, the engine relies on specialized DAX metrics to dynamically compute financial impact across shifting multi-platform fee structures:
 
 ### 1. Blended Contribution Margin
-Calculates true net profitability across all digital channels simultaneously by deducting variable platform referral fees, fulfillment costs, and structural COGS.
+Calculates true operational profitability across all digital channels simultaneously by deducting total structural COGS from combined cross-platform net revenue streams. This measure utilizes clean measure branching to naturally inherit platform fee deductions calculated in the underlying revenue metrics.
 
 ```dax
-Blended Contribution Margin = 
-SUM(Shopify_Orders[Net Revenue]) + SUM(Amazon_Fees[Amount]) - SUM(Product_Master[Total COGS])
+Blended_Contribution_Margin = [Shopify_Net_Revenue] + [Amazon_Net_Revenue] - [Total_COGS]
 ```
 ### 2. Forensic Margin Leakage %
 Tracks the total percentage of revenue lost across digital channels due to undocumented platform fees, processing discrepancies, or reconciliation gaps.
