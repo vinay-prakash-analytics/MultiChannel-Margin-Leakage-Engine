@@ -51,14 +51,9 @@ Calculates true operational profitability across all digital channels simultaneo
 ```dax
 Blended_Contribution_Margin = [Shopify_Net_Revenue] + [Amazon_Net_Revenue] - [Total_COGS]
 ```
-### 2. Forensic Margin Leakage %
-Tracks the total percentage of revenue lost across digital channels due to undocumented platform fees, processing discrepancies, or reconciliation gaps.
+### 2. Total FBA Fulfillment Cost
+Aggregates the absolute financial outflow paid directly to Amazon's logistics network for picking, packing, and shipping orders. In this model, tracking the total fulfillment overhead serves as a key indicator of margin compression compared to direct-to-consumer sales channels.
 
 ```dax
-Margin Leakage Pct = 
-DIVIDE(
-    [Total Hidden Leakages], 
-    SUM(Shopify_Orders[Gross Sales]) + SUM(Amazon_Fees[Gross Sales]), 
-    0
-)
+FBA_Leakage = CALCULATE(SUM(Amazon_Fees[Fulfillment_Fee_INR]))
 ```
